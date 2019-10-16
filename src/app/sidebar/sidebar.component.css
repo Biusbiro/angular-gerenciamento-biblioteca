@@ -1,12 +1,12 @@
-.side-bar{
-    width: 20%;
-    min-width: 240px;
-}
-
 .side-bar-button-container{
     min-width: 240px;
 }
 
 .title{
-    margin-top: 6px;
+    margin-top: 2px;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
 }
