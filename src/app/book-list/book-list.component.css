@@ -1,0 +1,42 @@
+.content-list{
+    padding: 20px;
+    margin-left: 40px;
+    margin-top: -10px;
+    align-content: center;
+    width: 75%;
+    border-left: #cacaca 1px solid;
+    border-right: #cacaca 1px solid;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.title-list{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(78, 78, 78);
+}
+
+.itens-list{
+    color: rgb(78, 78, 78);
+}
+
+.item-list{
+    padding: 10px;
+}
+
+.item-list-title{
+
+}
+
+.item-list-author{
+    font-size: 12px;
+    color: grey;
+}
+
+.item-list-place{
+    float: right;
+    margin-top: -30px;
+    margin-right: 20px;
+}

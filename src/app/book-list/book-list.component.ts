@@ -1,0 +1,28 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-book-list',
+  templateUrl: './book-list.component.html',
+  styleUrls: ['./book-list.component.css']
+})
+export class BookListComponent implements OnInit {
+
+  books = [
+    {key: '0', title: 'Working effectively with legacy code',            author: 'Michael C. Feathers',                                       place: 'Prateleira 1'},
+    {key: '1', title: 'Design Patterns',                                 author: 'Ralph Johnson, Erich Gamma, John Vlissides e Richard Helm', place: 'Prateleira 3'},
+    {key: '2', title: 'Clean Code',                                      author: 'Robert C. Martin.',                                         place: 'Prateleira 2'},
+    {key: '3', title: 'Java Concurrency in Practice',                    author: 'Brian Goetz',                                               place: 'Prateleira 1'},
+    {key: '4', title: 'Domain Driven Design',                            author: 'Eric Evans',                                                place: 'Prateleira 1'},
+    {key: '5', title: 'JavaScript',                                      author: 'Douglas Crockford',                                         place: 'Prateleira 2'},
+    {key: '6', title: 'Patterns of Enterprise Application Architecture', author: 'Martin Fowler',                                             place: 'Prateleira 1'},
+    {key: '7', title: 'Code complete',                                   author: 'Steve McConnell ',                                          place: 'Prateleira 2'},
+    {key: '8', title: 'Refactoring',                                     author: 'Martin Fowler',                                             place: 'Prateleira 1'},
+    {key: '9', title: 'Head First Design Patterns',                      author: 'Eric Freeman, Elisabeth Freeman, Kathy Sierra, Bert Bates', place: 'Prateleira 3'},
+  ];
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

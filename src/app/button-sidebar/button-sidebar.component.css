@@ -1,0 +1,26 @@
+.side-bar-button{
+    display: inline-block;
+    padding: 10px;
+}
+
+.button-label{
+    vertical-align: middle;
+    padding: 15px;
+    margin: gray 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    color: #737373
+}
+
+.button-label:hover{
+    color: #000;
+    background-color: rgb(212, 212, 212);
+}
+
+.mat-icon{
+    float: left;
+}
+
+.active{
+    background-color: #B3E9CE;
+}

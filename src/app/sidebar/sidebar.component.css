@@ -1,0 +1,12 @@
+.side-bar{
+    width: 20%;
+    min-width: 240px;
+}
+
+.side-bar-button-container{
+    min-width: 240px;
+}
+
+.title{
+    margin-top: 6px;
+}

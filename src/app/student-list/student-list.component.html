@@ -1,0 +1,19 @@
+<div class="content-list">
+    <div class="title-list">Alunos Cadastrados</div>
+    <hr>
+    <div class="itens-list">
+        <div class="item-list" *ngFor="let student of students">
+            <div class="item-list-name">{{student?.name}}</div>
+            <div class="item-list-educational-institution">{{student?.educationalInstitution}}</div>
+            <div class="item-list-pendencies" 
+            [ngClass]="{
+                'no-pendencies': student?.pendencies,
+                'pendencies': !student?.pendencies
+            }">
+                <mat-icon>{{student?.pendencies ? 'check_circle' : 'warning' }}</mat-icon>
+            </div>
+            <div class="divider"></div>
+        </div>
+    </div>
+</div>
+    

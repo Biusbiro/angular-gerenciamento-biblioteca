@@ -1,0 +1,12 @@
+<div class="content-list">
+    <div class="title-list">Livros Cadastrados</div>
+    <hr>
+    <div class="itens-list">
+        <div class="item-list" *ngFor="let book of books">
+            <div class="item-list-title">{{book?.title}}</div>
+            <div class="item-list-author">{{book?.author}}</div>
+            <div class="item-list-place">{{book?.place}}</div>
+            <hr>
+        </div>
+    </div>
+</div>
