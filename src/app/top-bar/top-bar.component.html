@@ -1,7 +1,6 @@
-<mat-toolbar class="top-bar" style="margin-left: -13px;">
-    <app-button-sidebar>
-        <div class="icon" style="margin-top: -8px; color: white;">menu</div>
-        <div class="title"></div>
-    </app-button-sidebar>
-    <img src="https://apps1.qualiex.com/Content/images/logo_branco.png" width="96px" alt="">
+<mat-toolbar class="top-bar">
+        <button mat-mini-fab style="margin-left: -5px; margin-right: 5px;" color="black" aria-label="menu" (click)="drawer.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    <img src="https://apps1.qualiex.com/Content/images/logo_branco.png" width="96px" alt="" style="margin-left: 10px;">
 </mat-toolbar>

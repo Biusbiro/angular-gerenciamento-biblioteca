@@ -1,5 +1,28 @@
-<div class="main-content">
-    <app-sidebar style="border-right: solid 2px #dcdcdc; background-color: #ffffff;"></app-sidebar>
+<mat-drawer-container style="position: fixed; height: 100%; left: 0;" class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <app-sidebar style="border-right: solid 2px #dcdcdc; background-color: #ffffff;"></app-sidebar>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        <button type="button" mat-button  (click)="drawer.toggle()">
+        +
+        </button>
+    </div>
+</mat-drawer-container>
+
+<mat-drawer-container style="position: fixed; height: 100%; right: 0;" class="example-container" autosize>
+        <mat-drawer #drawer2 class="example-sidenav" mode="side">
+            <div class="content-form">
+                <app-student-form></app-student-form>
+            </div>
+        </mat-drawer>
+        <div class="example-sidenav-content">
+            <button type="button" mat-button  (click)="drawer2.toggle()">
+            +
+            </button>
+        </div>
+</mat-drawer-container>
+
+<div class="main-content container flex">
     <div class="content">
         <ng-content></ng-content>
     </div>
@@ -9,6 +32,7 @@
     right: 2%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     font-weight: bold; 
-    font-size: xx-large;" 
+    font-size: xx-large;
+    z-index: 2;" 
     mat-fab color="primary" >+</button>
 </div>

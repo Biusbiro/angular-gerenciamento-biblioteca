@@ -4,23 +4,29 @@
   }
   
 
-form{
+.form{
     background-color: #ffffff;
 }
 
-form-title{
+.form-title{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     background-color: #00B75B;
+    height: 50px;
+    max-height: 50px;
     color: #ffffff;
 }
 
-form-icon-close{
-    
+.form-icon-close{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-form-title-label{
-    
+.form-title-label{
 }
 
-form-fields{
-    
+.form-fields{
+    padding: 20px;
 }
