@@ -1,7 +1,7 @@
 <div class="form">
     <div class="form-title">
         <div class="form-icon-close">
-            <button mat-mini-fab color="green">
+            <button mat-button>
                 <mat-icon>close</mat-icon>
             </button>
         </div>
@@ -10,20 +10,33 @@
     <div class="form-fields">
         <div class="example-container">
             <mat-form-field>
-                <input matInput placeholder="Nome do Aluno">
+                <input matInput placeholder="Nome do Aluno" value={{student?.name}}>
             </mat-form-field>
             
             <mat-form-field>
-                <input matInput placeholder="Instituição de Ensino">
+                <input matInput placeholder="Instituição de Ensino" value={{student?.educationalInstitution}}>
             </mat-form-field>
-            
+
             <mat-form-field>
-                <mat-select placeholder="Adicionar Livro">
-                    <mat-option value="option">Option 1</mat-option>
-                    <mat-option value="option">Option 2</mat-option>
-                    <mat-option value="option">Option 3</mat-option>
+                <mat-select  placeholder="Livros"> 
+                    <mat-option  *ngFor="let book of books" value="{{book?.key}}" >{{book?.title}}</mat-option>
                 </mat-select>
             </mat-form-field>
+
+            <button mat-raised-button color="primary">Adicionar Livro</button>
         </div>
+    </div>
+    <div class="books" style="flex-direction: row-reverse; justify-content: flex-end;">
+        <mat-chip-list>
+            <mat-chip *ngFor="let book of student?.books">
+                {{bookListService.getById(book.key).title}}
+                <mat-icon matChipRemove >cancel</mat-icon>
+            </mat-chip>
+        </mat-chip-list>
+    </div>
+    <br>
+    <div style="float: right">
+        <button mat-button>Cancelar</button>
+        <button mat-button color="primary">Salvar</button>
     </div>
 </div>

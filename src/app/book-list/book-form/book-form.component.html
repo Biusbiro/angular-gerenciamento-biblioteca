@@ -1,13 +1,28 @@
-
-
-<mat-form-field>
-    <input matInput placeholder="Input">
-</mat-form-field>
-
-<mat-form-field>
-    <input matInput placeholder="Input">
-</mat-form-field>
-
-<mat-form-field>
-    <input matInput placeholder="Input">
-</mat-form-field>
+<div class="form">
+        <div class="form-title">
+            <div class="form-icon-close">
+                <button mat-button (click)="btnCloseClicked()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
+            <div class="form-title-label">Editar Livro {{ id }}</div>
+        </div>
+        <div class="form-fields">
+            <div class="example-container">
+                <mat-form-field>
+                    <input matInput placeholder="Titulo do Livro" value="{{book?.title}}" class="">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Autor" value="{{book?.author}}">
+                </mat-form-field>
+                <mat-form-field>
+                        <input matInput placeholder="Prateleira" value="{{book?.place}}">
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="float: right">
+            <button mat-button>Cancelar</button>
+            <button mat-button color="primary">Salvar</button>
+        </div>
+    </div>
+    

@@ -1,17 +1,27 @@
+<mat-drawer-container style="position: fixed; height: 100%; right: 50%;" autosize>
+    <mat-drawer #formContainer class="example-sidenav" mode="side">
+        <div class="content-form">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer>
+</mat-drawer-container>
+<!-- <button type="button" mat-button (click)="formContainer.toggle()">+</button> -->
+<button type="button" mat-button (click)="formContainer.toggle()">+</button>
+
 <div class="content-list">
     <div class="title-list">Alunos Cadastrados</div>
     <hr>
     <div class="itens-list">
         <div class="item-list" *ngFor="let student of students">
-            <a href="/students/{{student?.key}}">
+            <a routerLink="/students/{{student?.key}}">
                 <div class="item-list-name">{{student?.name}}</div>
                 <div class="item-list-educational-institution">{{student?.educationalInstitution}}</div>
                 <div class="item-list-pendencies" 
                 [ngClass]="{
-                    'no-pendencies': student?.pendencies,
-                    'pendencies': !student?.pendencies
+                    'pendencies': student?.pendencies,
+                    'no-pendencies': !student?.pendencies
                 }">
-                    <mat-icon>{{student?.pendencies ? 'check_circle' : 'warning' }}</mat-icon>
+                    <mat-icon>{{student?.pendencies ? 'warning' : 'check_circle' }}</mat-icon>
                 </div>
                 <div class="divider"></div>
             </a>
@@ -19,5 +29,16 @@
     </div>
 </div>
 
-
+<a routerLink="/students/new">
+    <button style="
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+        font-weight: bold; 
+        font-size: xx-large;
+        z-index: 2;" 
+        mat-fab color="primary">+
+    </button>
+</a>
     

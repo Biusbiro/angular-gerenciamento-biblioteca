@@ -1,9 +1,18 @@
+<mat-drawer-container style="position: fixed; height: 100%; right: 50%;" autosize>
+    <mat-drawer #formContainer class="example-sidenav" mode="side">
+        <div class="content-form">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer>
+</mat-drawer-container>
+<button type="button" mat-button (click)="formContainer.toggle()">+</button>
+
 <div class="content-list">
     <div class="title-list">Livros Cadastrados</div>
     <hr>
     <div class="itens-list">
         <div class="item-list" *ngFor="let book of books">
-            <a href="/books/{{book?.key}}">
+            <a routerLink="/books/{{book?.key}}" (click)="openSidenav()">
                 <div class="item-list-title">{{book?.title}}</div>
                 <div class="item-list-author">{{book?.author}}</div>
                 <div class="item-list-place">{{book?.place}}</div>
@@ -12,3 +21,18 @@
         </div>
     </div>
 </div>
+
+<a routerLink="/books/new" (click)="openSidenav()">
+    <button style="
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+        font-weight: bold; 
+        font-size: xx-large;
+        z-index: 2;" 
+        mat-fab color="primary">+
+    </button>
+</a>
+
+

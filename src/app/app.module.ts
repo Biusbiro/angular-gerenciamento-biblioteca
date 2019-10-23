@@ -1,4 +1,3 @@
-import { StudentFormComponent } from './student-list/student-form/student-form.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,9 +8,8 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ButtonSidebarComponent } from './button-sidebar/button-sidebar.component';
-import { BookListComponent } from './book-list/book-list.component';
-import { StudentListComponent } from './student-list/student-list.component';
-import { BookFormComponent } from './book-list/book-form/book-form.component';
+import { BooksListModule } from './book-list/book-list.module';
+import { StudentListModule } from './student-list/student-list.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -20,6 +18,7 @@ import { MatIconModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -27,11 +26,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     TopBarComponent,
     MainContentComponent,
     SidebarComponent,
-    ButtonSidebarComponent,
-    BookListComponent,
-    StudentListComponent,
-    BookFormComponent,
-    StudentFormComponent
+    ButtonSidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +40,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatButtonModule,
     MatInputModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatChipsModule,
+    BooksListModule,
+    StudentListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

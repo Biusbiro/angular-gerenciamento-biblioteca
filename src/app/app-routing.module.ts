@@ -8,9 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path: 'books', component: BookListComponent},
-  {path: 'books/:id', component: BookFormComponent},
   {path: 'students', component: StudentListComponent},
-  {path: 'students/:id', component: StudentFormComponent}
 ];
 
 @NgModule({
