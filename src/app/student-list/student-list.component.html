@@ -5,7 +5,6 @@
         </div>
     </mat-drawer>
 </mat-drawer-container>
-<!-- <button type="button" mat-button (click)="formContainer.toggle()">+</button> -->
 <button type="button" mat-button (click)="formContainer.toggle()">+</button>
 
 <div class="content-list">
@@ -13,7 +12,7 @@
     <hr>
     <div class="itens-list">
         <div class="item-list" *ngFor="let student of students">
-            <a routerLink="/students/{{student?.key}}">
+            <a routerLink="/students/{{student?.key}}" (click)="openSidenav()">
                 <div class="item-list-name">{{student?.name}}</div>
                 <div class="item-list-educational-institution">{{student?.educationalInstitution}}</div>
                 <div class="item-list-pendencies" 
@@ -29,7 +28,7 @@
     </div>
 </div>
 
-<a routerLink="/students/new">
+<a routerLink="/students/new" (click)="openSidenav()">
     <button style="
         position: fixed;
         bottom: 2%;

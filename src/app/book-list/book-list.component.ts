@@ -27,7 +27,6 @@ export class BookListComponent implements OnInit {
 
   closeSidenav() {
     this.sidenavForm.close();
-    // this.router.navigate([this.router.url.split(/\/(new|edit)\/?/gi)[0]]);
   }
 
 }
